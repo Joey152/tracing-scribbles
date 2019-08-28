@@ -52,6 +52,7 @@
       "timeEnd",
       "trace"
     ],
+    "no-constant-condition": true,
     "no-empty": false,
     "no-inferrable-types": [
       true,
@@ -83,10 +84,15 @@
     "no-outputs-metadata-property": true,
     "template-banana-in-box": true,
     "template-no-negated-async": true,
+    "ter-indent": [
+        true,
+        4
+    ],
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true
   },
   "rulesDirectory": [
-    "codelyzer"
+    "codelyzer",
+    "node_modules/tslint-eslint-rules/dist/rules"
   ]
 }

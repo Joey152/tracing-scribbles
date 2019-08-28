@@ -1,0 +1,11 @@
+<input type="text" placeholder="Name">
+<canvas #canvas
+        (mousedown)="startDraw($event)"
+        (mousemove)="draw($event)"
+        (mouseup)="stopDraw()"
+        (mouseout)="stopDraw()">
+</canvas>
+<div>
+    <button id="btn-sketch-clear" (click)="clear()">Clear</button>
+    <button id="btn-sketch-save">Save</button>
+</div>

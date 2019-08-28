@@ -1,0 +1,29 @@
+@import "variables";
+
+header {
+    background: $primary-color;
+    color: white;
+}
+
+.title {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+
+    &.active, &:hover {
+        background: white;
+        color: $primary-color;
+    }
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
