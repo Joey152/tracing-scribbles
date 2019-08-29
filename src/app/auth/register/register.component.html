@@ -1,1 +1,7 @@
-<p>register works!</p>
+<form [formGroup]="registerForm">
+    <input type="text" formControlName="username" placeholder="Username">
+    <input type="password" formControlName="password" placeholder="Password">
+    <input type="password" formControlName="passwordConfirm" placeholder="Confirm Password">
+    <a routerLink="/login">Login</a>
+    <button type="submit">Register</button>
+</form>

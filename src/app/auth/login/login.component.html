@@ -1,1 +1,6 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="username" placeholder="Username">
+    <input type="password" formControlName="password" placeholder="Password">
+    <a routerLink="/register">Register</a>
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+</form>

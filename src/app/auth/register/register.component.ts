@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
     selector: 'trsc-register',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-    constructor() { }
+    registerForm = this.fb.group({
+        username: [''],
+        password: [''],
+        passwordConfirm: [''],
+    });
+
+    constructor(private fb: FormBuilder) { }
 
     ngOnInit() {
     }

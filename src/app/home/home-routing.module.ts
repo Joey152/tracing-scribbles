@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { SketchComponent } from './sketch/sketch.component';
 import { HomeComponent } from './home.component';
 import { BrowseComponent } from './browse/browse.component';
+import { AuthGuard } from '../auth/auth.guard';
+import { GameComponent } from './game/game.component';
+import { HighscoresComponent } from './highscores/highscores.component';
 
 
 const routes: Routes = [
@@ -10,14 +13,11 @@ const routes: Routes = [
         path: '',
         component: HomeComponent,
         children: [
-            {
-                path: '',
-                children: [
-                    { path: '', redirectTo: 'sketch', pathMatch: 'full'},
-                    { path: 'sketch', component: SketchComponent },
-                    { path: 'browse', component: BrowseComponent }
-                ]
-            }
+            { path: 'sketch', component: SketchComponent },
+            { path: 'browse', component: BrowseComponent },
+            { path: 'game', component: GameComponent },
+            { path: 'highscores', component: HighscoresComponent },
+            { path: '', redirectTo: 'sketch', pathMatch: 'full' },
         ]
     }
 ];
