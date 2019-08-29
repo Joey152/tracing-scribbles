@@ -46,7 +46,8 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
             tap(
                 data => {
                     if (!data) {
-                        this.router.navigate(['/login']);
+                        // TODO: how to dynamically generate this
+                        this.router.navigate(['/account/login']);
                     }
                 }
             )

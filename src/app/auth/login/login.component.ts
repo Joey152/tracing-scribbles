@@ -30,7 +30,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.authSubscription = this.authState.isAuthenticated.subscribe((data) => {
             if (data) {
-                this.router.navigate(['/home']);
+                // TODO: should this be hardcoded or should it navigate backwards
+                this.router.navigate(['/']);
             }
         });
     }

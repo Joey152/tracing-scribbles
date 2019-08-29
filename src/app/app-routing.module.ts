@@ -4,7 +4,11 @@ import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
     {
-        path: 'home',
+        path: 'account',
+        loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
+    },
+    {
+        path: '',
         canLoad: [AuthGuard],
         loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule),
     },
@@ -14,7 +18,6 @@ const routes: Routes = [
     imports: [RouterModule.forRoot(
         routes,
         {
-            enableTracing: true,
             preloadingStrategy: PreloadAllModules
         }
     )],

@@ -1,10 +1,10 @@
 <header>
     <span class="title">Tracing Scribbles</span>
     <nav>
-        <a routerLink="/home/sketch" routerLinkActive="active">Sketch</a>
-        <a routerLink="/home/browse" routerLinkActive="active">Browse</a>
-        <a routerLink="/home/game" routerLinkActive="active">Game</a>
-        <a routerLink="/home/highscores" routerLinkActive="active">Highscores</a>
+        <a [routerLink]="prependParentPath('/sketch') | async" routerLinkActive="active">Sketch</a>
+        <a [routerLink]="prependParentPath('/browse') | async" routerLinkActive="active">Browse</a>
+        <a [routerLink]="prependParentPath('/game') | async" routerLinkActive="active">Game</a>
+        <a [routerLink]="prependParentPath('/highscores') | async" routerLinkActive="active">Highscores</a>
     </nav>
 </header>
 <main>
