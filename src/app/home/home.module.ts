@@ -7,6 +7,7 @@ import { SketchComponent } from './sketch/sketch.component';
 import { HomeComponent } from './home.component';
 import { GameComponent } from './game/game.component';
 import { HighscoresComponent } from './highscores/highscores.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HighscoresComponent } from './highscores/highscores.component';
     ],
     imports: [
         CommonModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        HttpClientModule
     ]
 })
 export class HomeModule { }
