@@ -14,7 +14,10 @@ export class RegisterComponent implements OnInit {
         passwordConfirm: [''],
     });
 
-    constructor(private fb: FormBuilder) { }
+    constructor(
+        private fb: FormBuilder,
+        public moduleRouteService: ModuleRouteService
+    ) { }
 
     ngOnInit() {
     }

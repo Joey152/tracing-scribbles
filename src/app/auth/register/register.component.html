@@ -2,6 +2,5 @@
     <input type="text" formControlName="username" placeholder="Username">
     <input type="password" formControlName="password" placeholder="Password">
     <input type="password" formControlName="passwordConfirm" placeholder="Confirm Password">
-    <a routerLink="/login">Login</a>
-    <button type="submit">Register</button>
+    <a [routerLink]="moduleRouteService.prependParentPath('/login') | async">Login</a>
 </form>

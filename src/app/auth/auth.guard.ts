@@ -40,7 +40,6 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
     }
 
     canLoad(route: Route, segments: UrlSegment[]): Observable<boolean> {
-        console.log('hello');
         return this.authState.isAuthenticated.pipe(
             take(1),
             tap(

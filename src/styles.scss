@@ -1,3 +1,9 @@
+@import 'variables';
+
 body {
     margin: 0;
+}
+
+a {
+    color: $accent-color-3;
 }

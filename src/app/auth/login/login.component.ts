@@ -4,12 +4,13 @@ import { LoginService } from './login.service';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ModuleRouteService } from 'src/app/common/module-route.service';
 
 @Component({
     selector: 'trsc-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss'],
-    providers: [{ provide: LoginService, useClass: LoginService }]
+    providers: [LoginService]
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit, OnDestroy {
         private loginService: LoginService,
         private fb: FormBuilder,
         private authState: AuthService,
-        private router: Router
+        private router: Router,
+        public moduleRouteService: ModuleRouteService
     ) { }
 
     ngOnInit() {
